@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ThemeController;
+use App\Http\Controllers\SubscriberController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,7 @@ use App\Http\Controllers\ThemeController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+// THEME ROUTES
 Route::controller(ThemeController::class)->name("theme.")->group(function(){
     Route::get('/','index')->name('index');
     Route::get('/category','category')->name('category');
@@ -26,10 +27,8 @@ Route::controller(ThemeController::class)->name("theme.")->group(function(){
     Route::get('/single-blog','singleBlog')->name('single-blog');
 
 });
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+// SUBSCRIBER ROUTES
+Route::post('/subscriber/store',[SubscriberController::class,'store'])->name('subscriber.store');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
