@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ThemeController;
 use App\Http\Controllers\SubscriberController;
 use App\Http\Controllers\ContactController;
-
+use App\Http\Controllers\BlogController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,6 +33,9 @@ Route::post('/subscriber/store',[SubscriberController::class,'store'])->name('su
 
 // CONTACT ROUTES
 Route::post('/contact/store',[ContactController::class,'store'])->name('contact.store');
+
+// BLOGS ROUTES
+Route::resource('blogs', BlogController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
