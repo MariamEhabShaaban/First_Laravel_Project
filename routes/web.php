@@ -19,13 +19,8 @@ use App\Http\Controllers\BlogController;
 // THEME ROUTES
 Route::controller(ThemeController::class)->name("theme.")->group(function(){
     Route::get('/','index')->name('index');
-    Route::get('/category','category')->name('category');
+    Route::get('/category/{id}','category')->name('category');
     Route::get('/contact','contact')->name('contact');
-    // Route::get('/login','login')->name('login');
-
-    // Route::get('/register','register')->name('register');
-
-    Route::get('/single-blog','singleBlog')->name('single-blog');
 
 });
 // SUBSCRIBER ROUTES
@@ -35,6 +30,7 @@ Route::post('/subscriber/store',[SubscriberController::class,'store'])->name('su
 Route::post('/contact/store',[ContactController::class,'store'])->name('contact.store');
 
 // BLOGS ROUTES
+Route::get('/my-blogs',[BlogController::class,'my_Blogs'])->name('blogs.my-blogs');
 Route::resource('blogs', BlogController::class);
 
 Route::get('/dashboard', function () {
