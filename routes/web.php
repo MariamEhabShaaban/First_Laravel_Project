@@ -32,19 +32,11 @@ Route::post('/contact/store',[ContactController::class,'store'])->name('contact.
 
 // BLOGS ROUTES
 Route::get('/my-blogs',[BlogController::class,'my_Blogs'])->name('blogs.my-blogs');
-Route::resource('blogs', BlogController::class);
+Route::resource('blogs', BlogController::class)->except('index');
 
 // COMMENT ROUTES
 Route::post('/comments/store',[CommentController::class,'store'])->name('comments.store');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
 
 require __DIR__.'/auth.php';

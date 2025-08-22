@@ -12,7 +12,8 @@ class ThemeController extends Controller
 
     public function index(){
         $blogs =Blog::paginate(1);
-        return view('theme.index',compact('blogs'));
+        $sliderBlogs = Blog::latest()->get();
+        return view('theme.index',compact('blogs','sliderBlogs'));
     }
 
       public function contact(){
