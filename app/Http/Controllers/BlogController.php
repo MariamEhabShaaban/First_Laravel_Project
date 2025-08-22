@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\Comment;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -56,8 +57,9 @@ class BlogController extends Controller
      * Display the specified resource.
      */
     public function show(Blog $blog)
-    {
-
+    {   
+        
+        
          return view('theme.single-blog',compact('blog'));
       
     }

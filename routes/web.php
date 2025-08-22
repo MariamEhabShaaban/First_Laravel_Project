@@ -1,11 +1,12 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ThemeController;
-use App\Http\Controllers\SubscriberController;
-use App\Http\Controllers\ContactController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ThemeController;
+use App\Http\Controllers\CommentController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SubscriberController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,6 +33,9 @@ Route::post('/contact/store',[ContactController::class,'store'])->name('contact.
 // BLOGS ROUTES
 Route::get('/my-blogs',[BlogController::class,'my_Blogs'])->name('blogs.my-blogs');
 Route::resource('blogs', BlogController::class);
+
+// COMMENT ROUTES
+Route::post('/comments/store',[CommentController::class,'store'])->name('comments.store');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
