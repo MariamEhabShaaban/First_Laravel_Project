@@ -1,8 +1,12 @@
 <?php
 
 namespace App\Http\Requests;
-
+use Illuminate\Validation\Rules;
+use Illuminate\Support\Facades\Hash;
+use App\Helpers\ApiResponse;
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\ValidationException;
 
 class UpdateBlogRequest extends FormRequest
 {
@@ -21,12 +25,20 @@ class UpdateBlogRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
+        $rules = [
             'name'=>'required|string',
             'description'=>'required',
             'category_id'=>'required|exists:categories,id',
             'image'=>'nullable|mimes:png,jpg' 
         ];
+
+         if (in_array($this->method(), ['PUT', 'PATCH'])) {
+        $rules['name']        = 'sometimes|required|string';
+        $rules['description'] = 'sometimes|required|string';
+        $rules['category_id'] = 'sometimes|required|exists:categories,id';
+    }
+
+    return $rules;
     }
 
     public function attributes(){

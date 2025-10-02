@@ -1,8 +1,12 @@
 <?php
 
 namespace App\Http\Requests;
-
+use Illuminate\Validation\Rules;
+use Illuminate\Support\Facades\Hash;
+use App\Helpers\ApiResponse;
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\ValidationException;
 
 class StoreBlogRequest extends FormRequest
 {
@@ -12,6 +16,14 @@ class StoreBlogRequest extends FormRequest
     public function authorize(): bool
     {
         return true;
+    }
+
+       protected function failedValidation(Validator $validator)
+    {
+        if ($this->is('api/*')) {
+            $response = ApiResponse::sendResponse(422, 'Validation Errors', $validator->messages()->all());
+            throw new ValidationException($validator, $response);
+        }
     }
 
     /**

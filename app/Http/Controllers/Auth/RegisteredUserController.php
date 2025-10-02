@@ -37,7 +37,7 @@ class RegisteredUserController extends Controller
         ]);
 
         $request->messages([
-            'email.required' => 'My customize error'
+            'email.required' => 'Please enter your email'
         ]);
 
         $user = User::create([

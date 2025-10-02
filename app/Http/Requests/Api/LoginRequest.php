@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Api;
 
 use App\Models\User;
 use Illuminate\Validation\Rules;
@@ -10,27 +10,35 @@ use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\ValidationException;
 
-class ProfileUpdateRequest extends FormRequest
+
+class LoginRequest extends FormRequest
 {
+
     public function authorize(): bool
     {
         return true;
     }
 
-       protected function failedValidation(Validator $validator)
+        protected function failedValidation(Validator $validator)
     {
         if ($this->is('api/*')) {
             $response = ApiResponse::sendResponse(422, 'Validation Errors', $validator->messages()->all());
             throw new ValidationException($validator, $response);
         }
     }
+
     public function rules(): array
     {
         return [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', Rule::unique(User::class)->ignore($this->user()->id)],
+            'email' => ['required', 'string', 'email'],
+            'password' => ['required'],
         ];
     }
 
-    
+    public function attributes(){
+        return [
+            'password' =>'Password',
+            'email'=>'Email'
+        ];
+    }
 }

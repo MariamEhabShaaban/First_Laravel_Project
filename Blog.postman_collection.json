@@ -1,0 +1,1455 @@
+{
+	"info": {
+		"_postman_id": "712f3674-4759-4c2b-ab72-b312e6c68899",
+		"name": "Blog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48217942"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "user_login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/login?email=mariamehab26122003@gmail.com&password=26122003",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"login"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "mariamehab26122003@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "26122003"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "user_login_example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/login?email=mariamehab26122003@gmail.com&password=26122003",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"login"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "mariamehab26122003@gmail.com"
+										},
+										{
+											"key": "password",
+											"value": "26122003"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 Sep 2025 05:34:08 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"msg\": \"success\",\n    \"data\": {\n        \"token\": \"1|QSoPXwMGZQGtf3WFNCSL9S6ElddnnTwcaU0kv8Kpfaec5ac1\",\n        \"name\": \"Mariam\",\n        \"email\": \"mariamehab26122003@gmail.com\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "user_register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/register?name=Menna&email=menna@gmail.com&password=26122003&password_confirmation=26122003",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"register"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Menna"
+								},
+								{
+									"key": "email",
+									"value": "menna@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "26122003"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "26122003"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "user_register_example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/register?name=Menna&email=menna2222@gmail.com&password=26122003&password_confirmation=26122003",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"register"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Menna"
+										},
+										{
+											"key": "email",
+											"value": "menna2222@gmail.com"
+										},
+										{
+											"key": "password",
+											"value": "26122003"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "26122003"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 Sep 2025 06:04:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 201,\n    \"msg\": \"success\",\n    \"data\": {\n        \"token\": \"4|oc7QDVegZTDdgl79mZ9f6xHJjFyqMkGZYC6XDHS7eb119173\",\n        \"name\": \"Menna\",\n        \"email\": \"menna2222@gmail.com\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "user_logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "user_logout_example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/logout",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 Sep 2025 06:13:57 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"msg\": \"success\",\n    \"data\": []\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Home_Page",
+			"item": [
+				{
+					"name": "home",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "home_example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/home/?page=2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"home",
+										""
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 Sep 2025 22:22:12 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"msg\": \"success\",\n    \"data\": {\n        \"blogs\": {\n            \"info\": [\n                {\n                    \"id\": 8,\n                    \"name\": \"Zelda Dunlap\",\n                    \"description\": \"A in ipsam qui at su\",\n                    \"image\": \"1755824226-m-blog-5.jpg\",\n                    \"category\": {\n                        \"id\": 4,\n                        \"name\": \"Travel\",\n                        \"created_at\": \"2025-08-20T03:35:59.000000Z\",\n                        \"updated_at\": \"2025-08-20T03:35:59.000000Z\"\n                    },\n                    \"user\": {\n                        \"id\": 2,\n                        \"name\": \"Mariam\",\n                        \"email\": \"mariamehab26122003@gmail.com\",\n                        \"email_verified_at\": null,\n                        \"created_at\": \"2025-08-17T16:28:18.000000Z\",\n                        \"updated_at\": \"2025-08-17T16:28:18.000000Z\"\n                    },\n                    \"created_at\": null,\n                    \"updated_at\": null\n                }\n            ],\n            \"pagination\": {\n                \"current page\": 2,\n                \"per page\": 1,\n                \"links\": {\n                    \"first\": \"http://127.0.0.1:8000/api/home?page=1\",\n                    \"last\": \"http://127.0.0.1:8000/api/home?page=2\"\n                }\n            }\n        },\n        \"sliderBlogs\": [\n            {\n                \"id\": 8,\n                \"name\": \"Zelda Dunlap\",\n                \"description\": \"A in ipsam qui at su\",\n                \"image\": \"1755824226-m-blog-5.jpg\",\n                \"category_id\": 4,\n                \"user_id\": 2,\n                \"created_at\": \"2025-08-22T00:57:06.000000Z\",\n                \"updated_at\": \"2025-08-22T00:57:06.000000Z\"\n            },\n            {\n                \"id\": 7,\n                \"name\": \"Aaron Ball\",\n                \"description\": \"Rerum quam sint opti\",\n                \"image\": \"1755816772-m-blog-2.jpg\",\n                \"category_id\": 2,\n                \"user_id\": 2,\n                \"created_at\": \"2025-08-21T22:52:52.000000Z\",\n                \"updated_at\": \"2025-08-21T22:52:52.000000Z\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "get_category",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "get_category_example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/category/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"category",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Sep 2025 05:27:24 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"msg\": \"success\",\n    \"data\": {\n        \"category\": \"Food\",\n        \"blogs\": []\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Subscribe",
+			"item": [
+				{
+					"name": "store_subscribe",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/subscriber/store?email=menna11111111@gmail.com",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"subscriber",
+								"store"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "menna11111111@gmail.com"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "store_subscribe_example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "menna@gmail.com",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/subscriber/store",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"subscriber",
+										"store"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "menna11111111@gmail.com",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Sep 2025 06:09:49 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 201,\n    \"msg\": \"success\",\n    \"data\": {\n        \"email\": \"menna@gmail.com\",\n        \"updated_at\": \"2025-09-24T06:09:49.000000Z\",\n        \"created_at\": \"2025-09-24T06:09:49.000000Z\",\n        \"id\": 4\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Contacts",
+			"item": [
+				{
+					"name": "store_contact",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "mariam",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "mariam@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "subject",
+									"value": "fghijok",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "dtfyguhijokp",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/contact/store",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"contact",
+								"store"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "store_contact_example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "mariam",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "mariam@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "subject",
+											"value": "fghijok",
+											"type": "text"
+										},
+										{
+											"key": "message",
+											"value": "dtfyguhijokp",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/contact/store",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"contact",
+										"store"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Sep 2025 06:16:03 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 201,\n    \"msg\": \"success\",\n    \"data\": []\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Blogs",
+			"item": [
+				{
+					"name": "get_user_blogs",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "get_user_blogs_example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/my-blogs",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"my-blogs"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Sep 2025 06:22:01 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 201,\n    \"msg\": \"success\",\n    \"data\": [\n        {\n            \"id\": 7,\n            \"name\": \"Aaron Ball\",\n            \"description\": \"Rerum quam sint opti\",\n            \"image\": \"1755816772-m-blog-2.jpg\",\n            \"category_id\": 2,\n            \"user_id\": 2,\n            \"created_at\": \"2025-08-21T22:52:52.000000Z\",\n            \"updated_at\": \"2025-08-21T22:52:52.000000Z\"\n        },\n        {\n            \"id\": 8,\n            \"name\": \"Zelda Dunlap\",\n            \"description\": \"A in ipsam qui at su\",\n            \"image\": \"1755824226-m-blog-5.jpg\",\n            \"category_id\": 4,\n            \"user_id\": 2,\n            \"created_at\": \"2025-08-22T00:57:06.000000Z\",\n            \"updated_at\": \"2025-08-22T00:57:06.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "store_blog",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/blogs/store",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"blogs",
+								"store"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "store_blog_example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "api",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "api",
+											"type": "text"
+										},
+										{
+											"key": "category_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/maria/OneDrive/Pictures/Screenshots/Screenshot 2025-09-22 043730.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/blogs/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"blogs",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Sep 2025 06:39:31 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 201,\n    \"msg\": \"success\",\n    \"data\": {\n        \"name\": \"api\",\n        \"description\": \"api\",\n        \"category_id\": \"1\",\n        \"image\": \"1758695971-Screenshot 2025-09-22 043730.png\",\n        \"user_id\": 2,\n        \"updated_at\": \"2025-09-24T06:39:31.000000Z\",\n        \"created_at\": \"2025-09-24T06:39:31.000000Z\",\n        \"id\": 10\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit_blog",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/blogs/7/edit",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"blogs",
+										"7",
+										"edit"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Sep 2025 06:47:13 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"msg\": \"success\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Food\",\n            \"created_at\": \"2025-08-20T03:35:59.000000Z\",\n            \"updated_at\": \"2025-08-20T03:35:59.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Fashion\",\n            \"created_at\": \"2025-08-20T03:35:59.000000Z\",\n            \"updated_at\": \"2025-08-20T03:35:59.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Financial\",\n            \"created_at\": \"2025-08-20T03:35:59.000000Z\",\n            \"updated_at\": \"2025-08-20T03:35:59.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Travel\",\n            \"created_at\": \"2025-08-20T03:35:59.000000Z\",\n            \"updated_at\": \"2025-08-20T03:35:59.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "update_blog",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "9|z0WWXVjvfEZPBtLeTX5SVAPKm14XV34SmwBAnZbHd0e79c21",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "mmmmmmmttttttt",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "mmmmmmmmmm",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/maria/OneDrive/Pictures/Screenshots/Screenshot 2025-09-22 043730.png"
+								},
+								{
+									"key": "_method",
+									"value": "patch",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/blogs/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"blogs",
+								"7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "mmmmmmmttttttt",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "mmmmmmmmmm",
+											"type": "text"
+										},
+										{
+											"key": "category_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/maria/OneDrive/Pictures/Screenshots/Screenshot 2025-09-22 043730.png"
+										},
+										{
+											"key": "_method",
+											"value": "patch",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/blogs/7",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"blogs",
+										"7"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Sep 2025 07:48:09 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 201,\n    \"msg\": \"success\",\n    \"data\": {\n        \"id\": 7,\n        \"name\": \"mmmmmmmttttttt\",\n        \"description\": \"mmmmmmmmmm\",\n        \"image\": \"1758700089-Screenshot 2025-09-22 043730.png\",\n        \"category_id\": \"1\",\n        \"user_id\": 2,\n        \"created_at\": \"2025-08-21T22:52:52.000000Z\",\n        \"updated_at\": \"2025-09-24T07:48:09.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete_blog",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "9|z0WWXVjvfEZPBtLeTX5SVAPKm14XV34SmwBAnZbHd0e79c21",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "mmmmmmmttttttt",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "mmmmmmmmmm",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/maria/OneDrive/Pictures/Screenshots/Screenshot 2025-09-22 043730.png"
+								},
+								{
+									"key": "_method",
+									"value": "patch",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/blogs/7/destroy",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"blogs",
+								"7",
+								"destroy"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "example",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "mmmmmmmttttttt",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "mmmmmmmmmm",
+											"type": "text"
+										},
+										{
+											"key": "category_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/maria/OneDrive/Pictures/Screenshots/Screenshot 2025-09-22 043730.png"
+										},
+										{
+											"key": "_method",
+											"value": "patch",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/blogs/7",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"blogs",
+										"7"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Sep 2025 07:56:04 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 201,\n    \"msg\": \"success\",\n    \"data\": []\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "store_comment",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "mariam",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "mariam@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "subject",
+											"value": "dtyuioip",
+											"type": "text"
+										},
+										{
+											"key": "message",
+											"value": "dfghgjhkj",
+											"type": "text"
+										},
+										{
+											"key": "blog_id",
+											"value": "8",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/comments/store",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"comments",
+										"store"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Sep 2025 08:03:47 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"msg\": \"success\",\n    \"data\": {\n        \"name\": \"mariam\",\n        \"email\": \"mariam@gmail.com\",\n        \"subject\": \"dtyuioip\",\n        \"message\": \"dfghgjhkj\",\n        \"blog_id\": \"8\",\n        \"updated_at\": \"2025-09-24T08:03:47.000000Z\",\n        \"created_at\": \"2025-09-24T08:03:47.000000Z\",\n        \"id\": 3\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
